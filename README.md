@@ -10,5 +10,5 @@ adb reverse tcp:3333 tcp:8080
 
 adb shell "/data/local/tmp/frida-server &"
 
-frida -U -f com.tu.app -l disable-flutter-tls.js
+frida -U -f com.tu.app -l disable-flutter-tls.js -l rootbeer_bypass.js
 ```
