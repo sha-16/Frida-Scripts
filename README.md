@@ -12,3 +12,14 @@ adb shell "/data/local/tmp/frida-server &"
 
 frida -U -f com.tu.app -l disable-flutter-tls.js -l rootbeer_bypass.js
 ```
+Si estás yendo más a fondo y vas a modificar un SMALI, puedes meter esto y mandar todas las protecciones al `/dev/null` 🚀
+
+```
+.method public static final checkRootMethod1()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+```
